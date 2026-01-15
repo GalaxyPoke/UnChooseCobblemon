@@ -1,0 +1,105 @@
+# UnChooseCobblemon 配置文件
+# 禁用Cobblemon初始宝可梦选择的插件
+
+# 数据库配置
+database:
+  # 数据库类型: sqlite 或 mysql
+  type: sqlite
+  
+  # SQLite配置
+  sqlite:
+    file: "data.db"
+  
+  # MySQL配置
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "unchoose_cobblemon"
+    username: "root"
+    password: "password"
+    # 连接池配置
+    pool:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      max-lifetime: 1800000
+      connection-timeout: 30000
+
+# 初始宝可梦禁用设置
+starter:
+  # 是否启用禁用功能
+  enabled: true
+  # 禁用模式: block (完全阻止) / notify (阻止并通知) / log (仅记录)
+  mode: "notify"
+  # 是否允许有bypass权限的玩家选择
+  allow-bypass: true
+  # 新玩家加入时是否自动锁定初始宝可梦选择
+  auto-lock-new-players: true
+  # 取消选择时发送的消息类型: actionbar / chat / title
+  message-type: "actionbar"
+
+# GUI设置
+gui:
+  # 是否启用GUI
+  enabled: true
+  # 主菜单标题
+  main-menu-title: "&6&l宝可梦初始选择管理"
+  # 玩家管理界面标题
+  player-menu-title: "&b&l玩家管理"
+  # 每页显示的玩家数量
+  players-per-page: 45
+  # 填充物品
+  filler:
+    enabled: true
+    material: "GRAY_STAINED_GLASS_PANE"
+    name: " "
+  # 按钮样式
+  buttons:
+    back:
+      material: "ARROW"
+      name: "&c返回"
+    next-page:
+      material: "SPECTRAL_ARROW"
+      name: "&a下一页"
+    prev-page:
+      material: "SPECTRAL_ARROW"
+      name: "&a上一页"
+    close:
+      material: "BARRIER"
+      name: "&c关闭"
+    refresh:
+      material: "SUNFLOWER"
+      name: "&e刷新"
+
+# 日志设置
+logging:
+  # 是否启用详细日志
+  verbose: false
+  # 是否记录玩家选择尝试
+  log-attempts: true
+  # 日志文件
+  file: "logs/unchoose.log"
+
+# 性能设置
+performance:
+  # 异步数据库操作
+  async-database: true
+  # 玩家数据缓存时间(秒)
+  cache-duration: 300
+  # 最大缓存玩家数
+  max-cache-size: 1000
+
+# 消息设置 (支持 & 颜色代码和 PlaceholderAPI)
+messages:
+  prefix: "&8[&6UnChoose&8] &r"
+  starter-blocked: "&c你的初始宝可梦选择已被禁用！"
+  starter-blocked-actionbar: "&c初始宝可梦选择已禁用"
+  no-permission: "&c你没有权限执行此操作！"
+  player-not-found: "&c未找到玩家: &e{player}"
+  player-locked: "&a已锁定玩家 &e{player} &a的初始宝可梦选择"
+  player-unlocked: "&a已解锁玩家 &e{player} &a的初始宝可梦选择"
+  config-reloaded: "&a配置已重新加载！"
+  database-error: "&c数据库操作失败，请查看控制台日志"
+  player-status: "&e玩家 {player} 初始选择状态: {status}"
+  status-locked: "&c已锁定"
+  status-unlocked: "&a已解锁"
+  status-selected: "&b已选择"

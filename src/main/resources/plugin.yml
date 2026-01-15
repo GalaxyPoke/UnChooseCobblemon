@@ -1,0 +1,39 @@
+name: UnChooseCobblemon
+version: ${version}
+main: com.unchoose.cobblemon.UnChooseCobblemon
+api-version: '1.21'
+description: 禁用Cobblemon初始宝可梦选择的插件
+authors:
+  - UnChoose
+softdepend:
+  - Cobblemon
+
+commands:
+  unchoose:
+    description: UnChooseCobblemon 主命令
+    usage: /unchoose <子命令>
+    aliases: [uc, ucb]
+    permission: unchoose.use
+
+permissions:
+  unchoose.use:
+    description: 使用基本命令的权限
+    default: true
+  unchoose.admin:
+    description: 管理员权限
+    default: op
+  unchoose.bypass:
+    description: 绕过初始宝可梦禁用限制
+    default: op
+  unchoose.gui:
+    description: 打开GUI界面的权限
+    default: true
+  unchoose.reload:
+    description: 重载配置的权限
+    default: op
+  unchoose.setstarterlock:
+    description: 设置玩家初始锁定状态的权限
+    default: op
+  unchoose.query:
+    description: 查询玩家数据的权限
+    default: op

@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+build/
+gradle-8.5/
+gradle-8.5.zip
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build outputs
+out/
+target/
+
+# Logs
+logs/
+*.log
+
+# Local configuration
+local.properties

@@ -1,0 +1,86 @@
+# English Language File
+prefix: "&8[&6UnChoose&8] &r"
+
+# Common Messages
+common:
+  no-permission: "&cYou don't have permission to do this!"
+  player-only: "&cThis command can only be executed by players!"
+  invalid-args: "&cInvalid arguments! Usage: {usage}"
+  player-not-found: "&cPlayer not found: &e{player}"
+  player-offline: "&cPlayer &e{player} &cis offline"
+
+# Starter Pokemon Related
+starter:
+  blocked: "&cYour starter pokemon selection has been disabled!"
+  blocked-actionbar: "&cStarter selection disabled"
+  blocked-title: "&c&lBlocked"
+  blocked-subtitle: "&7Starter selection has been disabled"
+  already-selected: "&eYou have already selected a starter pokemon"
+  bypassed: "&aYou have bypass permission, you can select normally"
+
+# Player Status
+status:
+  locked: "&cLocked"
+  unlocked: "&aUnlocked"
+  selected: "&bSelected"
+  query: "&ePlayer &b{player} &estatus:"
+  query-locked: "  &7- Lock status: {status}"
+  query-selected: "  &7- Starter selected: {status}"
+  query-uuid: "  &7- UUID: &f{uuid}"
+
+# Admin Commands
+admin:
+  lock-success: "&aLocked starter selection for player &e{player}"
+  unlock-success: "&aUnlocked starter selection for player &e{player}"
+  reload-success: "&aConfiguration reloaded!"
+  reload-fail: "&cConfiguration reload failed, check console"
+
+# GUI Related
+gui:
+  main-title: "&6&lStarter Selection Manager"
+  player-title: "&b&lPlayer Manager - Page {page}"
+  status-title: "&e&l{player}'s Status"
+  
+  buttons:
+    back: "&cBack"
+    next-page: "&aNext Page &7({page})"
+    prev-page: "&aPrevious Page &7({page})"
+    close: "&cClose"
+    refresh: "&eRefresh"
+    lock-all: "&cLock All Online Players"
+    unlock-all: "&aUnlock All Online Players"
+  
+  player-item:
+    locked: "&c{player} [Locked]"
+    unlocked: "&a{player} [Unlocked]"
+    lore:
+      - "&7Click to toggle lock status"
+      - "&7Shift+Click to view details"
+      - ""
+      - "&7UUID: &f{uuid}"
+      - "&7Status: {status}"
+
+# Database
+database:
+  connected: "&aDatabase connected successfully"
+  disconnected: "&cDatabase disconnected"
+  error: "&cDatabase operation failed: {error}"
+  migration: "&eMigrating database..."
+  migration-complete: "&aDatabase migration complete"
+
+# Help
+help:
+  header: "&6&l===== UnChooseCobblemon Help ====="
+  commands:
+    - "&e/uc help &7- Show help information"
+    - "&e/uc status [player] &7- View status"
+    - "&e/uc lock <player> &7- Lock player"
+    - "&e/uc unlock <player> &7- Unlock player"
+    - "&e/uc gui &7- Open management GUI"
+    - "&e/uc reload &7- Reload configuration"
+  footer: "&6&l================================"
+
+# Player notifications
+notify:
+  locked: "&c[UnChoose] &7Your starter selection has been &clocked &7by an administrator."
+  unlocked: "&a[UnChoose] &7Your starter selection has been &aunlocked &7by an administrator. You can now choose your starter!"
