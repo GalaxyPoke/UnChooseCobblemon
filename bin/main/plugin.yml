@@ -12,7 +12,7 @@ commands:
   unchoose:
     description: UnChooseCobblemon 主命令
     usage: /unchoose <子命令>
-    aliases: [ucc, uc, ucb]
+    aliases: [ucc]
     permission: unchoose.use
 
 permissions:
